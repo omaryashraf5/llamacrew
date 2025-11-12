@@ -1,0 +1,57 @@
+# Example YAML workflow for blog post creation
+# Usage: llamacrew run blog_workflow.yaml
+
+crew:
+  name: "Blog Post Creation Team"
+  process: "sequential"
+  memory: true
+  verbose: true
+
+agents:
+  - name: planner
+    role: "Content Strategist"
+    goal: "Create comprehensive content strategies and outlines"
+    backstory: "Expert content strategist with 10 years of SEO experience"
+    model: "llama3-70b"
+    temperature: 0.7
+
+  - name: researcher
+    role: "Research Specialist"
+    goal: "Gather accurate and relevant information"
+    backstory: "Thorough researcher with expertise in fact-checking"
+    tools: ["search"]
+    model: "llama3-70b"
+
+  - name: writer
+    role: "Content Writer"
+    goal: "Write engaging and well-structured content"
+    backstory: "Professional writer with a talent for storytelling"
+    model: "llama3-70b"
+    temperature: 0.8
+
+  - name: editor
+    role: "Editor"
+    goal: "Polish and refine content for publication"
+    backstory: "Meticulous editor with attention to detail"
+    model: "llama3-70b"
+    temperature: 0.3
+
+tasks:
+  - description: "Create a detailed outline for a blog post about AI trends in 2024"
+    agent: planner
+    expected_output: "Comprehensive outline with sections and key points"
+
+  - description: "Research the latest AI trends and gather supporting data"
+    agent: researcher
+    expected_output: "List of verified facts, statistics, and sources"
+    dependencies: [0]
+
+  - description: "Write a comprehensive 800-word blog post about AI trends"
+    agent: writer
+    expected_output: "Complete, engaging blog post"
+    dependencies: [0, 1]
+
+  - description: "Edit and polish the blog post for publication"
+    agent: editor
+    expected_output: "Publication-ready blog post"
+    dependencies: [2]
