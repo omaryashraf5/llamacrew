@@ -56,6 +56,7 @@ dmypy.json
 # These are useful locally but shouldn't be pushed upstream
 QUICK_REFERENCE.md
 PHASE_2_3_COMPLETE.md
+PHASE_1_VALIDATION_RESULTS.md
 MEMORY_BACKEND_MIGRATION.md
 IMPLEMENTATION_SUMMARY.md
 HOW_DEVELOPERS_USE_IT.md
