@@ -2,7 +2,7 @@
 
 A lightweight agent-team runtime built on **Llama Stack** for orchestrating multi-agent workflows.
 
-## 🌟 Features
+## Features
 
 - **Simple Agent Definition**: Use `@agent` decorator or direct instantiation
 - **Multi-Agent Workflows**: Coordinate multiple agents with task dependencies
@@ -11,7 +11,7 @@ A lightweight agent-team runtime built on **Llama Stack** for orchestrating mult
 - **Native Llama Stack Integration**: Built specifically for Meta's Llama Stack
 - **Process Strategies**: Sequential, parallel, and hierarchical execution
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -25,7 +25,7 @@ cd llamacrew
 pip install -e .
 ```
 
-**📖 Complete Guide:** See the [User Guide](docs/USER_GUIDE.md) for detailed installation, usage patterns, and examples.
+**Complete Guide:** See the [User Guide](docs/USER_GUIDE.md) for detailed installation, usage patterns, and examples.
 
 ### 30-Second Example
 
@@ -70,7 +70,7 @@ result = crew.kickoff()
 print(result.final_output)
 ```
 
-## 📖 Core Concepts
+## Core Concepts
 
 ### Agents
 
@@ -122,7 +122,7 @@ crew = Crew(
 result = crew.kickoff(inputs={"topic": "AI trends"})
 ```
 
-## 🧠 Memory System
+## Memory System
 
 LlamaCrew supports multiple memory backends:
 
@@ -213,7 +213,7 @@ crew = Crew.resume("./checkpoint.json")
 result = crew.kickoff()
 ```
 
-## 🎯 Process Types
+## Process Types
 
 ### Sequential
 Tasks execute one after another based on dependencies:
@@ -248,7 +248,7 @@ crew = Crew(
 )
 ```
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 llamacrew/
@@ -267,7 +267,7 @@ llamacrew/
 └── docs/                  # Documentation
 ```
 
-## 🔧 Configuration
+## Configuration
 
 Configure Llama Stack connection:
 
@@ -285,7 +285,7 @@ from llamacrew.orchestration import WorkflowEngine
 engine = WorkflowEngine(crew=crew, llama_adapter=adapter)
 ```
 
-## 📚 Examples
+## Examples
 
 See the `examples/` directory for more:
 
@@ -293,7 +293,7 @@ See the `examples/` directory for more:
 - `planning_research_write.py` - Content creation pipeline (coming soon)
 - `customer_support_team.py` - Customer support crew (coming soon)
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Run all tests
@@ -306,7 +306,7 @@ pytest --cov=llamacrew
 pytest tests/unit/test_agent.py
 ```
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [x] Core abstractions (Agent, Task, Crew)
 - [x] Sequential execution
@@ -320,24 +320,24 @@ pytest tests/unit/test_agent.py
 - [ ] CLI tool
 - [ ] Advanced tool integration
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file for details
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built on top of [Llama Stack](https://github.com/llamastack/llama-stack) by Meta.
 Inspired by CrewAI and AutoGen.
 
-## 📞 Support
+## Support
 
 - GitHub Issues: [Report bugs or request features]
 - Documentation: [Link to docs]
 
 ---
 
-**LlamaCrew** - Multi-agent orchestration, powered by Llama Stack 🦙✨
+**LlamaCrew** - Multi-agent orchestration, powered by Llama Stack
