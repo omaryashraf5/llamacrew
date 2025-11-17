@@ -1,4 +1,4 @@
-# 🦙 LlamaCrew
+# LlamaCrew
 
 A lightweight agent-team runtime built on **Llama Stack** for orchestrating multi-agent workflows.
 
